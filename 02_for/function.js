@@ -17,4 +17,3 @@ function sum(n1, n2) {
 }
 
 sum(10, 20);
-sum(1, undefined);
