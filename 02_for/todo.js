@@ -4,7 +4,7 @@
 function guguDan(n) {
   document.writeln('<h3>' + n + '단</h3>');
   for (let i = 1; i < 10; i++) {
-    document.writeln(n + ' * ' + i + ' = ' + (n * i) + '<br>');
+    document.writeln(`${n} * ${i} = ${n * i}<br>`);
   }
 }
 
@@ -27,13 +27,14 @@ function addNumber(x, y) {
 }
 
 // 4.
+let star = '';
 for (let i = 5; i > 0; i--) {
-  let star = '';
   for (let j = 0; j < i; j++) {
     star += '*'
   }
-  console.log(star);
-} 
+  star += '\n';
+}
+console.log(star);
 
 guguDan(5);
 summary(7);

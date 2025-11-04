@@ -8,9 +8,9 @@ do {
 console.log(sum);
 
 for (let i = 0; i < 5; i++) {
-  let star = ' '
+  let star = " ";
   for (let j = 0; j <= i; j++) {
-    star += '*';
+    star += "*";
   }
   console.log(star);
 }

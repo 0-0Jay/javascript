@@ -10,4 +10,4 @@ function differenceBetween2Number(x, y) {
   return x - y;
 }
 
-differenceBetween2Number(9, 16)
+differenceBetween2Number(9, 16);
