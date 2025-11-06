@@ -7,7 +7,6 @@ const students = [
 students.forEach((elem) => {
   const data = [elem.sno, elem.sname, elem.score];
   let tr = makeRow(data);
-  console.log(tr);
   document.querySelector("#studentList").appendChild(tr);
 });
 

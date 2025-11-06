@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <style>
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background: linear-gradient(135deg, #74abe2, #5563de);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .login-container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 320px;
+        text-align: center;
+      }
+
+      .login-container h2 {
+        margin-bottom: 24px;
+        color: #333;
+      }
+
+      .login-container input {
+        width: 100%;
+        padding: 12px 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+
+      .login-container button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .login-btn {
+        background-color: #5563de;
+        color: white;
+      }
+
+      .login-btn:hover {
+        background-color: #3d4cc7;
+      }
+
+      .signup-btn {
+        background-color: #e0e0e0;
+        color: #333;
+      }
+
+      .signup-btn:hover {
+        background-color: #cfcfcf;
+      }
+
+      .footer-text {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>로그인</h2>
+      <form id="loginForm" action="#" method="post">
+        <input
+          type="text"
+          id="userId"
+          name="userId"
+          placeholder="아이디(ID)"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="비밀번호(PW)"
+          required
+        />
+        <button type="submit" class="login-btn">로그인</button>
+        <button type="button" class="signup-btn">회원가입</button>
+      </form>
+      <div class="footer-text">ⓒ 2025 MyWebsite</div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>
