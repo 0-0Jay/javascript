@@ -109,7 +109,6 @@ function showPagingList(totalCount = 50) {
   endPage = Math.ceil(page / 10) * 10;
   startPage = endPage - 9;
   let realEnd = Math.ceil(totalCount / 5);
-  console.log(endPage, realEnd);
   if (endPage > realEnd) {
     endPage = realEnd;
   }
