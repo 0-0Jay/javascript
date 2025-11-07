@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="postRequest()">Post 요청</button>
+    <script>
+      let url =
+        "https://api.odcloud.kr/api/15077586/v1/centers?page=1&perPage=284&serviceKey=zMvF1axDh0GUKO3VNA8XiD6R8yJNPvMtCORVAnXPlZpE7KdrTRkDZdtqhmwhIg0udd9g8Ibj7q2xcya8OHBZiQ%3D%3D";
+      fetch(url)
+        .then((resp) => resp.json()) //stream -> javascript 객체
+        .then((result) => console.log(result.data));
+
+      function postRequest() {
+        const data = { title: "sample", author: "user01" };
+        fetch("http://localhost:3000/posts", {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then(function (resp) {
+            // return resp.json();
+          })
+          .then(function (result) {
+            console.log(result);
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+    </script>
+  </body>
+</html>

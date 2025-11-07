@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "첫 번째 글",
+      "author": "홍길동"
+    },
+    {
+      "id": "2",
+      "title": "두 번째 글",
+      "author": "이몽룡"
+    },
+    {
+      "id": "4",
+      "title": "sample",
+      "author": "user01"
+    },
+    {
+      "id": "2714",
+      "title": "sample",
+      "author": "user01"
+    },
+    {
+      "id": "f8c8",
+      "title": "sample",
+      "author": "user01"
+    },
+    {
+      "id": "051f",
+      "title": "sample",
+      "author": "user01"
+    },
+    {
+      "id": "3615",
+      "title": "sample",
+      "author": "user01"
+    }
+  ]
+}

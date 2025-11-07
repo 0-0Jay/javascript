@@ -16,11 +16,13 @@ categories.forEach((elem) => {
   categorySelect.appendChild(option);
 });
 
-// 검색어, 카테고리, 페이지 전역변수
+// 검색어, 카테고리, 페이지 관련 전역변수
 let category = 0;
 let search = "";
 let page = 1;
 let pagination = document.querySelector("div.pagination");
+let endPage = Math.ceil(page / 10) * 5;
+let startPage = endPage - 4;
 
 // 카테고리가 변경될 때 이벤트 호출
 categorySelect.addEventListener("change", (e) => {
@@ -28,7 +30,10 @@ categorySelect.addEventListener("change", (e) => {
   document.querySelector(".pagination").innerHTML = "";
   category = e.target.value;
   page = 1;
+  endPage = Math.ceil(page / 10) * 5;
+  startPage = endPage - 4;
   showTable(search, category, page);
+  showPagingList();
 });
 
 // 텍스트에서 키보드 입력이 발생하면 이벤트 호출
@@ -37,15 +42,21 @@ document.querySelector(".text").addEventListener("keyup", (e) => {
   document.querySelector(".pagination").innerHTML = "";
   search = e.target.value;
   page = 1;
+  endPage = Math.ceil(page / 10) * 5;
+  startPage = endPage - 4;
   showTable(search, category, page);
+  showPagingList();
 });
 
 // 페이징
 document.querySelector("div.pagination").addEventListener("click", (e) => {
   if (e.target.nodeName == "A") {
+    if (Number(e.target.innerText)) {
+      page = Number(e.target.innerText);
+    }
     document.querySelector("tbody").innerHTML = "";
-    page = e.target.innerText;
     showTable(search, category, page);
+    showPagingList();
   }
 });
 
@@ -96,18 +107,14 @@ function showTable(search, category) {
       document.querySelector("tbody").appendChild(tr);
     }
   }
-  showPagingList(arr.length);
 }
 
 // 페이징 목록 생성함수
-function showPagingList(totalCount = 50) {
+function showPagingList(totalCount = products.length) {
   pagination.innerHTML = "";
-  let startPage = 0;
-  let endPage = 0;
   let prev = false;
   let next = false;
-  endPage = Math.ceil(page / 10) * 10;
-  startPage = endPage - 9;
+  // 페이지 넘버 컨트롤
   let realEnd = Math.ceil(totalCount / 5);
   if (endPage > realEnd) {
     endPage = realEnd;
@@ -126,12 +133,19 @@ function showPagingList(totalCount = 50) {
   pagination.appendChild(tag);
   if (prev) {
     tag.className = "";
+    tag.addEventListener("click", () => {
+      startPage -= 5;
+      endPage -= 5;
+      page = startPage;
+      showTable(search, category, page);
+    });
   }
   // 페이징 목록
   for (let p = startPage; p <= endPage; p++) {
     let tag = document.createElement("a");
     tag.innerText = p;
     tag.href = "#";
+    tag.setAttribute("data-page", p);
     if (p == page) {
       tag.className = "active";
     }
@@ -145,6 +159,12 @@ function showPagingList(totalCount = 50) {
   pagination.appendChild(tag);
   if (next) {
     tag.className = "";
+    tag.addEventListener("click", () => {
+      startPage += 5;
+      endPage += 5;
+      page = startPage;
+      showTable(search, category, page);
+    });
   }
 }
-showPagingList(products.length); // 화면 로드시 즉시 페이징 목록 생성
+showPagingList(); // 화면 로드시 즉시 페이징 목록 생성

@@ -106,12 +106,18 @@
   </head>
   <body>
     <h3>학생정보등록</h3>
-
     <form id="addForm" action="">
-      <input id="f0" type="text" placeholder="학생번호" required />
-      <input id="f1" type="text" placeholder="이름" required />
-      <input id="f2" type="number" placeholder="점수" required />
-      <button type="submit">등록</button>
+      <fieldset>
+        <legend>학생 정보 입력</legend>
+        <input id="f0" type="text" placeholder="학생번호" required />
+        <input id="f1" type="text" placeholder="이름" required />
+        <input id="f2" type="number" placeholder="점수" required />
+        <br />
+        <br />
+        <input id="f3" type="text" placeholder="전화번호" required />
+        <input id="f4" type="text" placeholder="이메일" required />
+        <button type="submit">등록</button>
+      </fieldset>
     </form>
 
     <div id="list">
