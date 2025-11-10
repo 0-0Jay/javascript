@@ -1,0 +1,29 @@
+ul {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  width: 600px;
+  margin: 10px auto;
+}
+
+li:first-child {
+  background-color: gray;
+}
+
+span {
+  display: inline-block;
+  margin: 10px 40px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+}

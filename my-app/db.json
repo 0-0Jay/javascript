@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": "8921",
+      "title": "sample data",
+      "author": "user4"
+    },
+    {
+      "id": "ae41",
+      "title": "sample data",
+      "author": "user6"
+    },
+    {
+      "id": "4b16",
+      "title": "sample data",
+      "author": "user4"
+    },
+    {
+      "id": "b068",
+      "title": "sample data",
+      "author": "user3"
+    },
+    {
+      "id": "2e43",
+      "title": "sample data",
+      "author": "user3"
+    },
+    {
+      "id": "2ae4",
+      "title": "sample data",
+      "author": "user3"
+    },
+    {
+      "id": "d75d",
+      "title": "sample data",
+      "author": "user9"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "comment": "sample comment",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "comment": "sample comment2",
+      "postId": null
+    }
+  ]
+}

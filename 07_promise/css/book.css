@@ -1,0 +1,114 @@
+body {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 40px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* 제목 스타일 */
+h3 {
+  text-align: center;
+  color: #222;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* 테이블 기본 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 헤더 스타일 */
+thead {
+  background-color: #2563eb;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 본문 행 hover 효과 */
+tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+/* 가격 컬럼 오른쪽 정렬 */
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+/* 전체 폼 박스 */
+.register {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 각 행 (라벨+입력 2세트) */
+.form-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px 1fr; /* 라벨과 인풋의 균형 잡힌 폭 */
+  align-items: center;
+  gap: 10px 15px;
+  margin-bottom: 15px;
+}
+
+/* 라벨 통일된 폭과 정렬 */
+.form-row label {
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* 입력창 동일한 폭 */
+.form-row input[type="text"] {
+  width: 90%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+/* 포커스 시 강조 */
+.form-row input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* 버튼 */
+.register button {
+  display: block;
+  margin: 10px auto 0;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.register button:hover {
+  background-color: #1e40af;
+}
