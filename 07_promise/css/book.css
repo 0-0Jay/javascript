@@ -96,7 +96,7 @@ th:last-child {
 
 /* 버튼 */
 .register button {
-  display: block;
+  display: inline-block;
   margin: 10px auto 0;
   background-color: #2563eb;
   color: white;
